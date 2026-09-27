@@ -1,52 +1,95 @@
-\## Fungsi yang Diimplementasikan
+# Tugas 1 — Pengolahan Citra
 
+Repository ini berisi implementasi beberapa fungsi dasar dalam pengolahan citra menggunakan Python, yaitu **downsampling**, **quantization**, dan perhitungan properti citra.
 
+## Fungsi yang Diimplementasikan
 
-\### `downsample(image, n)`
+### `downsample(image, n)`
 
 Mengurangi resolusi citra dengan mengambil piksel pada interval `n`.
 
+**Parameter:**
 
+* `image` — citra yang akan diproses.
+* `n` — interval pengambilan piksel.
 
-\### `quantize(image, k)`
+### `quantize(image, k)`
 
-Mengurangi jumlah level keabuan citra dari 256 (8-bit) menjadi `2^k` level, kemudian hasilnya di-scale kembali ke rentang \[0, 255].
+Mengurangi jumlah level keabuan citra dari **256 level (8-bit)** menjadi `2^k` level.
 
+Setelah proses quantization, nilai piksel dikembalikan ke rentang **0–255**.
 
+**Parameter:**
 
-\### `image\_properties(image, dpi, bit\_depth=8)`
+* `image` — citra grayscale yang akan diproses.
+* `k` — jumlah bit yang digunakan untuk merepresentasikan level keabuan.
 
-Menghitung:
+### `image_properties(image, dpi, bit_depth=8)`
 
-\- Dimensi fisik citra (lebar × tinggi) dalam inci, berdasarkan nilai DPI
+Menghitung beberapa properti dari citra, yaitu:
 
-\- Ukuran memori citra tanpa kompresi, dalam KB
+* **Dimensi fisik citra** (lebar × tinggi) dalam inci berdasarkan nilai DPI.
+* **Ukuran memori citra** tanpa kompresi dalam KB.
 
+**Parameter:**
 
+* `image` — citra yang akan dianalisis.
+* `dpi` — resolusi citra dalam dots per inch.
+* `bit_depth` — kedalaman bit citra. Nilai default adalah `8`.
 
-\## Cara Menjalankan
+## Teknologi yang Digunakan
 
+* Python
+* NumPy
+* Pillow
+* Matplotlib
+* Jupyter Notebook
 
+## Cara Menjalankan
 
-1\. Clone repository ini
+### 1. Clone Repository
 
-2\. Install dependency yang dibutuhkan:
+Clone repository ini ke komputer lokal:
 
 ```bash
-
-&#x20;  pip install numpy pillow matplotlib
-
+git clone <URL_REPOSITORY>
+cd <NAMA_REPOSITORY>
 ```
 
-3\. Buka `Tugas\_1\_103012400157.ipynb` menggunakan Jupyter Notebook / JupyterLab
+### 2. Install Dependency
 
-4\. Jalankan seluruh cell secara berurutan
+Install library yang dibutuhkan menggunakan `pip`:
 
+```bash
+pip install numpy pillow matplotlib
+```
 
+### 3. Buka Notebook
 
-\## Contoh Gambar
+Buka file berikut menggunakan **Jupyter Notebook** atau **JupyterLab**:
 
+```text
+Tugas_1_103012400157.ipynb
+```
 
+### 4. Jalankan Program
 
-Notebook ini menggunakan contoh gambar yang diambil langsung dari URL untuk keperluan pengujian.
+Jalankan seluruh cell pada notebook secara berurutan untuk melihat hasil implementasi dan pengujian setiap fungsi.
 
+## Contoh Gambar
+
+Notebook menggunakan contoh gambar yang diambil langsung dari **URL** untuk keperluan pengujian fungsi pengolahan citra.
+
+Gambar tersebut digunakan sebagai input untuk proses:
+
+* Downsampling
+* Quantization
+* Perhitungan properti citra
+
+## Struktur Repository
+
+```text
+.
+├── Tugas_1_103012400157.ipynb
+└── README.md
+```
