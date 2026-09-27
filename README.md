@@ -1,5 +1,3 @@
-# Tugas 1 — Pengolahan Citra
-
 Repository ini berisi implementasi beberapa fungsi dasar dalam pengolahan citra menggunakan Python, yaitu **downsampling**, **quantization**, dan perhitungan properti citra.
 
 ## Fungsi yang Diimplementasikan
